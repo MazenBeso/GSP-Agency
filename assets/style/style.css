@@ -3,6 +3,16 @@
     margin: 0;
 }
 
+::-webkit-scrollbar{
+    background-color: gray;
+}
+::-webkit-scrollbar-track{
+    background-color: gray;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #FFB300;
+}
+
 body{
     background-color: rgba(255, 255, 255, 1);
     user-select: none;
@@ -13,7 +23,7 @@ body , html{
 
 /* ########## BACKGROUND COLOR ################# */
 .backGround1{
-    background-color:rgba(6, 177, 251, 1);
+    background-color:rgba(6, 177, 251, 1)!important;
 }
 .backGround2{
     background-color:rgba(0, 0, 0, 1);
@@ -41,7 +51,7 @@ body , html{
     color:rgba(0, 0, 0, 1);
 }
 .fontColor3{
-    color:rgba(245, 245, 243, 1);
+    color:rgba(245, 245, 243, 1)!important;
 }
 .fontColor4{
      color:rgba(255, 179, 0, 1);
@@ -158,6 +168,15 @@ width: 10%;
         transform: translateX(-10px);
      }  
     } 
+
+    .position_me::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 12%;
+        bottom: 0%;
+        box-shadow: -5px 110px 80px #06B1FB;
+    }
     
     p{
         font-size:1rem ;
@@ -230,15 +249,15 @@ width: 10%;
 }
 @keyframes pool {
     0%{
-    top: 300px;
+    top: 150px;
 
     }
     50%{
-     top: 400px;
+     top: 250px;
 
     }
     100%{
-     top: 300px;
+     top: 150px;
 
     }
   
@@ -487,6 +506,12 @@ right: -15% !important;
     right: -35%;
 }
 
+.about-us-btn:hover{
+    background: transparent!important;
+    border: 1px solid #06B1FB!important;
+    color: #06B1FB!important;
+}
+
 .form-control{
     background-color: #E4E4E4!important;
 }
@@ -665,3 +690,66 @@ right: -15% !important;
   }
 
 
+  .circle2{
+    width: 220px;
+    height: 220px;
+    left: -120px;
+    background-color: #06B1FB;
+    animation: circle2 2s linear infinite;
+    transition: 0.5s;
+}
+
+.circle2:hover{
+    left: -100px;
+}
+.circle2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    bottom: 0%;
+    box-shadow: -5px 110px 80px #06B1FB;
+}
+.circle3{
+    width: 150px;
+    height: 150px;
+    right: -70px;
+    background-color: #FFB300;
+    animation: circle3 2s linear infinite;
+    bottom: 50px;
+    transition: 0.5s;
+}
+.circle3:hover{
+    right: -100px;
+}
+.circle3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0%;
+    box-shadow: -5px 90px 60px #FFB300;
+}
+
+@keyframes circle2{
+    0%{
+        top: 10px;
+    }
+    50%{
+        top: 50px;
+    }
+    100%{
+        top: 10px;
+    }
+}
+@keyframes circle3{
+    0%{
+        bottom: 20px;
+    }
+    50%{
+        bottom: 50px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
