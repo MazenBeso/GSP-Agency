@@ -384,6 +384,13 @@ right: -15% !important;
 }
 
 @media screen and (min-width:919px) {
+    .section3{
+  
+        .img_none{
+    display: none;
+        }
+    }
+
     .hero{
         position: relative;
         overflow: hidden;
@@ -396,9 +403,16 @@ right: -15% !important;
     }
 
     @media screen and (max-width:989px) {
-        .position_me{
+        .position_me , .circle2 , .circle3, .po_me2{
             display: none !important;
         }
+
+        .nav_me {
+            .w_me {
+                width: 30%;
+            }
+        }
+
         .nav_me{
             ul{
             li{
@@ -634,6 +648,20 @@ right: -15% !important;
   .icon{
     width: 85px;
   }
+
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+  }
+
+
   .learn-more {
     display: inline-block;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important;
@@ -751,5 +779,52 @@ right: -15% !important;
     }
     100%{
         bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width:620px) {
+    .sectionName::before {
+        content: "";
+        width: 85px;
+        height: 3px;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        left: -70%;
+        background-color: #06B1FB;
+    }
+    .sectionName::after {
+        content: "";
+        width: 85px;
+        height: 3px;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        right: -70%;
+        background-color: #06B1FB;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .sectionName::before {
+        content: "";
+        width: 85px;
+        height: 3px;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        left: -70%;
+        background-color: #06B1FB;
+    }
+    .sectionName::after {
+        content: "";
+        width: 85px;
+        height: 3px;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        right: -70%;
+        background-color: #06B1FB;
     }
 }
